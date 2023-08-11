@@ -115,9 +115,7 @@ aria2c --console-log-level=error -c -x 16 -s 16 -k 1M https://huggingface.co/ckp
 sed -i -e 's/    start()/    #start()/g' /content/drive/MyDrive/stable-diffusion-webui-colab/stable-diffusion-webui/launch.py
 sed -i -e 's/checkout {commithash}/checkout --force {commithash}/g' /content/drive/MyDrive/stable-diffusion-webui-colab/stable-diffusion-webui/launch.py
 
-cd /content/drive/MyDrive/stable-diffusion-webui-colab/stable-diffusion-webui
-python launch.py --skip-torch-cuda-test
-
 mkdir /content/drive/MyDrive/stable-diffusion-webui-colab/stable-diffusion-webui/models/CLIP
 
-echo installed
+cd /content/drive/MyDrive/stable-diffusion-webui-colab/stable-diffusion-webui
+python launch.py --skip-torch-cuda-test
